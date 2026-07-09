@@ -12,9 +12,17 @@ import {
 import Aurora from './Aurora';
 import CurvedLoop from './CurvedLoop';
 import PillNav from './PillNav';
+import FlowingMenu from './FlowingMenu';
 
 export default function LandingPage({ onLaunchApp }) {
   const [openFaq, setOpenFaq] = useState(null);
+
+  const flowingMenuItems = [
+    { link: '#', text: 'Market Watch', image: 'https://picsum.photos/600/400?random=1' },
+    { link: '#', text: 'Official Circulars', image: 'https://picsum.photos/600/400?random=2' },
+    { link: '#', text: 'Security Alerts', image: 'https://picsum.photos/600/400?random=3' },
+    { link: '#', text: 'Live Registry', image: 'https://picsum.photos/600/400?random=4' }
+  ];
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -74,7 +82,7 @@ export default function LandingPage({ onLaunchApp }) {
               speed={0.4}
             />
           </div>
-          <div className="z-10 flex flex-col items-center gap-6">
+          <div className="relative z-10 flex flex-col items-center gap-6 w-full pointer-events-auto">
             <div className="flex items-center gap-2 px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-xs font-semibold text-indigo-300">
               <Sparkles className="w-3.5 h-3.5" /> Presenting SatyaCheck Trust Net
             </div>
@@ -257,6 +265,17 @@ export default function LandingPage({ onLaunchApp }) {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Flowing Menu Interactive Links */}
+        <section className="w-full flex flex-col gap-6 my-12" id="resources">
+          <div className="text-center max-w-2xl mx-auto flex flex-col gap-3 mb-4">
+            <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest">Resources</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Explore the Ecosystem</h2>
+          </div>
+          <div className="w-full h-[400px] border border-slate-900 rounded-3xl overflow-hidden relative">
+            <FlowingMenu items={flowingMenuItems} />
           </div>
         </section>
 

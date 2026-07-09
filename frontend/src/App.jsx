@@ -1364,6 +1364,118 @@ function SocialGuardFeed() {
       avatar: "🚨",
       time: "6h ago",
       text: "WARNING: Pay SEBI penalty of Rs 10,000 immediately to avoid trading block. Direct deposit to upi registration sebi@valid (or sebi-gov.in portal) to clear status."
+    },
+    {
+      id: 5,
+      author: "@RetailInvestorPro",
+      avatar: "👨‍💻",
+      time: "7h ago",
+      text: "Just analyzed the new TCS quarterly results. Margins look stable but growth is slightly muted in the European sector. Holding for now."
+    },
+    {
+      id: 6,
+      author: "@CryptoWhale99",
+      avatar: "🐳",
+      time: "8h ago",
+      text: "Hit the jackpot with this new memecoin! If you missed out, I'm sharing my next 100x gem inside my private discord. DM for link."
+    },
+    {
+      id: 7,
+      author: "@MarketDailyNews",
+      avatar: "📰",
+      time: "8h ago",
+      text: "Market Update: Nifty 50 touches new all-time high amid strong domestic inflows. IT index remains the top gainer for the third consecutive day."
+    },
+    {
+      id: 8,
+      author: "@OfficialSEBI",
+      avatar: "🏛️",
+      time: "9h ago",
+      text: "Press Release: SEBI implements T+0 settlement cycle on an optional basis for select 25 scrips. Check the official website for guidelines."
+    },
+    {
+      id: 9,
+      author: "@DailyStockTips_Free",
+      avatar: "💸",
+      time: "10h ago",
+      text: "Don't trade blindly! Get my daily stock tip before the market opens. 95% accuracy in options trading!"
+    },
+    {
+      id: 10,
+      author: "@OptionTraderX",
+      avatar: "📊",
+      time: "11h ago",
+      text: "Lost 50k today trading BankNifty straddles. Volatility completely wiped out my premiums. Taking a break for the week."
+    },
+    {
+      id: 11,
+      author: "@ScamAlertIndia",
+      avatar: "🛡️",
+      time: "12h ago",
+      text: "Beware of WhatsApp groups promising guaranteed profit in 24 hours. Always check SEBI RIA registration before taking advice!"
+    },
+    {
+      id: 12,
+      author: "@ZeroRiskWealth",
+      avatar: "💰",
+      time: "13h ago",
+      text: "My proprietary algo guarantees a 15% return every single month. DM me your portfolio size and we'll manage your account directly."
+    },
+    {
+      id: 13,
+      author: "@FinTwit_Guru",
+      avatar: "🧠",
+      time: "14h ago",
+      text: "What are your top picks for the infrastructure sector this year? L&T seems overvalued but rail stocks still have momentum."
+    },
+    {
+      id: 14,
+      author: "@RecoveryAgent_Sebi",
+      avatar: "💼",
+      time: "15h ago",
+      text: "Urgent: Your demat account is frozen due to pending KYCs. Pay processing fee via GPay to 9999999999 to reactivate instantly."
+    },
+    {
+      id: 15,
+      author: "@ValueInvesting101",
+      avatar: "📚",
+      time: "16h ago",
+      text: "Reminder: Time in the market always beats timing the market. Stick to fundamentally strong companies with consistent dividend yields."
+    },
+    {
+      id: 16,
+      author: "@TradingJackpot_Live",
+      avatar: "🎯",
+      time: "17h ago",
+      text: "Tomorrow's expiry is going to be massive. Join my premium channel for the ultimate hero-zero jackpot trade!"
+    },
+    {
+      id: 17,
+      author: "@HDFC_Securities_Upd",
+      avatar: "🏦",
+      time: "18h ago",
+      text: "Maintenance downtime alert: Our trading portal will be down from 11 PM to 2 AM on Saturday for scheduled backend upgrades."
+    },
+    {
+      id: 18,
+      author: "@MudraLoansDirect",
+      avatar: "💵",
+      time: "19h ago",
+      text: "Get pre-approved personal loans up to Rs 50 Lakhs in 10 minutes! No CIBIL check required. Guaranteed approval!"
+    },
+    {
+      id: 19,
+      author: "@MutualFundSahiHai",
+      avatar: "📈",
+      time: "20h ago",
+      text: "Systematic Investment Plans (SIPs) hit a record Rs 19,000 crore inflow last month, indicating strong retail participation."
+    },
+    {
+      id: 20,
+      author: "@FakeNewsBuster",
+      avatar: "🔍",
+      time: "21h ago",
+      text: "The rumor about Reliance launching a massive Rs 5,000 buyback is completely false. Always verify news directly from NSE/BSE announcements."
     }
   ]);
 

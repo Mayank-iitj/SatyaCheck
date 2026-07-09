@@ -1,6 +1,9 @@
 import os
 import time
 import json
+from dotenv import load_dotenv
+load_dotenv()
+
 from typing import Optional, List, Dict, Any
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -435,14 +438,6 @@ Rules for Analysis:
             reply = response_data["choices"][0]["message"]["content"]
             return {"reply": reply}
     except Exception as e:
-        # Fallback to local rule-based verification if Groq API fails
-        import layer2_detection
-        verdict = layer2_detection.analyze_claims(message)
-        
-        # Analyze_claims doesn't return an explanation directly, it returns findings
-        explanation = "Information check yields no major regulatory mismatches."
-        if verdict.get("findings"):
-            explanation = " ".join([f["claim"] + " - " + f["evidence"] for f in verdict["findings"]])
-            
-        return {"reply": f"⚠️ [Local Scanner Fallback] {explanation}"}
+        # Strict Groq-only mode: No fallback, return an error if unavailable
+        return {"reply": f"⚠️ [System Error] The Groq AI analysis service is currently unavailable. Please verify the API key is set correctly in production."}
 
