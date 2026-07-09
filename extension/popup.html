@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 320px;
+      margin: 0;
+      padding: 16px;
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #080b11;
+      color: #f3f4f6;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-b: 1px solid #1e293b;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+    .title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 10px;
+      color: #94a3b8;
+      margin: 2px 0 0 0;
+    }
+    .card {
+      background: rgba(30, 41, 59, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+    .card-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+      margin: 0 0 8px 0;
+    }
+    .status-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+      color: white;
+      text-align: center;
+      padding: 8px;
+      border-radius: 6px;
+      border: none;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);
+    }
+    .footer {
+      font-size: 9px;
+      color: #475569;
+      text-align: center;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div style="font-size: 20px;">🛡️</div>
+    <div>
+      <h1 class="title">SatyaCheck Guard</h1>
+      <p class="subtitle">Active In-Feed Social Scrubber</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Live Scan Status</p>
+    <div class="status-box">
+      <div class="indicator"></div>
+      <span>Watching Twitter/X, YT, and Telegram feeds</span>
+    </div>
+  </div>
+
+  <div class="card" style="background: rgba(16, 185, 129, 0.05); border-color: rgba(16, 185, 129, 0.15);">
+    <p class="card-title" style="color: #10b981;">Intermediary Registry</p>
+    <p style="font-size: 11px; margin: 4px 0; color: #cbd5e1; line-height: 1.4;">
+      Matching official brokerage domains and @valid UPI tags cryptographically.
+    </p>
+  </div>
+
+  <a href="http://localhost:5173" target="_blank" class="btn">Open Main Dashboard</a>
+  
+  <div class="footer">
+    SatyaCheck Security Protocol v1.0.0
+  </div>
+</body>
+</html>

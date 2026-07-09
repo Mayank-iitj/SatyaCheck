@@ -1,0 +1,28 @@
+.curved-loop-jacket {
+  min-height: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.curved-loop-svg {
+  user-select: none;
+  width: 100%;
+  aspect-ratio: 100 / 12;
+  overflow: visible;
+  display: block;
+  font-size: 5rem;
+  fill: rgba(255, 255, 255, 0.08);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Branded override for SatyaCheck landing page */
+.curved-loop-brand {
+  fill: rgba(167, 139, 250, 0.35);
+  letter-spacing: 0.05em;
+}
