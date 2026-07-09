@@ -195,7 +195,11 @@ function VerifierHub() {
 
   const handleUpload = (e) => {
     const file = e.target.files[0];
-    if (file) setSelectedFile(file);
+    if (file) {
+      setSelectedFile(file);
+      setText(''); // Prevent conflicting payloads
+      if (fileInputRef.current) fileInputRef.current.value = ''; // Reset input to allow re-selecting the same file
+    }
   };
 
   const handleVerify = async () => {
@@ -214,8 +218,14 @@ function VerifierHub() {
     try {
       const response = await fetch(`${BACKEND_URL}/api/verify`, {
         method: 'POST',
-        body: formData
+        body: formData,
+        signal: AbortSignal.timeout(15000) // 15-second timeout to prevent infinite buffering
       });
+      
+      if (!response.ok) {
+        throw new Error(`Server returned ${response.status}`);
+      }
+      
       const data = await response.json();
       setVerdict(data);
     } catch (err) {
@@ -249,8 +259,10 @@ function VerifierHub() {
 
         const res = await fetch(`${BACKEND_URL}/api/translate`, {
           method: 'POST',
-          body: formData
+          body: formData,
+          signal: AbortSignal.timeout(10000) // 10-second timeout
         });
+        if (!res.ok) throw new Error('Translation API error');
         const data = await res.json();
         setTranslatedText(data.translated_text);
       } catch (err) {
@@ -322,7 +334,7 @@ function VerifierHub() {
                   <span className="text-xs font-mono text-slate-300 truncate">{selectedFile.name}</span>
                 </div>
                 <span className="text-[10px] font-mono text-slate-500 shrink-0 bg-slate-950 px-2 py-0.5 rounded">
-                  {(selectedFile.size / 1024).toFixed(1)} KB
+                  {selectedFile.size ? (selectedFile.size / 1024).toFixed(1) : '0.0'} KB
                 </span>
               </div>
             )}
@@ -332,7 +344,10 @@ function VerifierHub() {
             <h3 className="text-sm font-semibold text-slate-300">Option 2: Paste Content / Notice Text</h3>
             <textarea
               value={text}
-              onChange={(e) => setText(e.target.value)}
+              onChange={(e) => {
+                setText(e.target.value);
+                if (selectedFile) setSelectedFile(null); // Prevent conflicting payloads
+              }}
               placeholder="Paste text circular, email notice body, or corporate claims here..."
               className="w-full h-32 input-field text-sm resize-none bg-slate-900/40"
             />
