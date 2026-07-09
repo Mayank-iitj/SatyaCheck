@@ -38,6 +38,16 @@ class TextVerifyRequest(BaseModel):
     text: str
     envelope: Optional[Dict[str, Any]] = None
 
+@app.get("/")
+def read_root():
+    return {
+        "status": "online",
+        "service": "SatyaCheck API Backend",
+        "version": "1.0.0",
+        "documentation": "/docs",
+        "health": "/api/health"
+    }
+
 @app.get("/api/health")
 def health():
     return {"status": "healthy"}
