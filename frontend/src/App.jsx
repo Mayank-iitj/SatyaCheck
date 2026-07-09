@@ -28,7 +28,10 @@ import {
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import LandingPage from './LandingPage';
 
-const BACKEND_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+const BACKEND_URL = import.meta.env.VITE_API_URL
+  || (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'http://127.0.0.1:8000'
+    : 'https://satyacheck-ea2g.onrender.com');
 
 function App() {
   const [currentPage, setCurrentPage] = useState('landing');
